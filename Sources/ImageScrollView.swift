@@ -171,7 +171,7 @@ open class ImageScrollView: UIScrollView {
         // fill width if the image and phone are both portrait or both landscape; otherwise take smaller scale
         let imagePortrait = imageSize.height > imageSize.width
         let phonePortrait = bounds.height >= bounds.width
-        var minScale = (imagePortrait == phonePortrait && self.landscapeAspectFill) ? xScale : min(xScale, yScale)
+        var minScale = max(xScale, yScale)
         
         let maxScale = maxScaleFromMinScale*minScale
         
