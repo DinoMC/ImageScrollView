@@ -153,6 +153,7 @@ open class ImageScrollView: UIScrollView {
         zoomView!.addGestureRecognizer(tapGesture)
         
         configureImageForSize(image.size)
+        adjustFrameToCenter()
     }
     
     fileprivate func configureImageForSize(_ size: CGSize) {
