@@ -225,6 +225,24 @@ open class ImageScrollView: UIScrollView {
     @objc func changeOrientationNotification() {
         configureImageForSize(imageSize)
     }
+    
+    // MARK: - Emptying the view + check
+    
+    open func empty() {
+        if let zV = zoomView {
+            zV.removeFromSuperview()
+            zoomView = nil
+        }
+    }
+    
+    open func isempty() {
+        if zoomView != nil {
+            return false
+        }
+        else {
+            return true
+        }
+    }
 }
 
 extension ImageScrollView: UIScrollViewDelegate{
