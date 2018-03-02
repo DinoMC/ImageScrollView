@@ -235,7 +235,7 @@ open class ImageScrollView: UIScrollView {
         }
     }
     
-    open func isempty() {
+    open func isempty() -> Bool {
         if zoomView != nil {
             return false
         }
